@@ -1,0 +1,26 @@
+/* Tema "nochevieja" (Nochevieja). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #1d2a4d;
+  --color-primario-oscuro: #0b1120;
+  --color-acento: #8a6a12;
+  --color-detalle: #e6c35c;
+  --color-fondo: #fbf9f4;
+  --color-fondo-alterno: #efece3;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(11, 17, 32, .22);
+  --color-boton: #1d2a4d;
+  --color-boton-hover: #2a3a66;
+  --color-boton-activo: #121b33;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #e6c35c;
+  --color-boton-destacado-activo: #d4ad3c;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "🥂 ¡Feliz Año Nuevo! Gracias por acompañarnos 🎆";
+  --tema-anuncio-fondo: #0b1120;
+  --tema-anuncio-texto: #e6c35c;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(11, 17, 32, .82), rgba(11, 17, 32, .45) 55%, rgba(11, 17, 32, .08));
+  --tema-decoracion: "🎆 🥂 ✨";
+  --tema-decoracion-cta: "🥂 🎉";
+}

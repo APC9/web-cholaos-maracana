@@ -1,0 +1,26 @@
+/* Tema "san-valentin" (San Valentín). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #b0204f;
+  --color-primario-oscuro: #4a0d22;
+  --color-acento: #c42f60;
+  --color-detalle: #f8b4c8;
+  --color-fondo: #fff7f9;
+  --color-fondo-alterno: #fde8ee;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(74, 13, 34, .22);
+  --color-boton: #b0204f;
+  --color-boton-hover: #921a42;
+  --color-boton-activo: #751535;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #f8b4c8;
+  --color-boton-destacado-activo: #f39ab4;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "💘 ¡Feliz San Valentín! Comparte algo rico con quien quieres 💕";
+  --tema-anuncio-fondo: #b0204f;
+  --tema-anuncio-texto: #ffffff;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(74, 13, 34, .82), rgba(74, 13, 34, .45) 55%, rgba(74, 13, 34, .08));
+  --tema-decoracion: "💘 💕 🌹";
+  --tema-decoracion-cta: "💌 💕";
+}

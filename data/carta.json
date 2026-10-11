@@ -1,0 +1,13 @@
+{
+  "actualizada": "2026-10-11",
+  "paginas": [
+    { "src": "img/carta/2026-10-11/pagina-01.jpg", "alt": "Carta, página 1" },
+    { "src": "img/carta/2026-10-11/pagina-02.jpg", "alt": "Carta, página 2" },
+    { "src": "img/carta/2026-10-11/pagina-03.jpg", "alt": "Carta, página 3" },
+    { "src": "img/carta/2026-10-11/pagina-04.jpg", "alt": "Carta, página 4" },
+    { "src": "img/carta/2026-10-11/pagina-05.jpg", "alt": "Carta, página 5" },
+    { "src": "img/carta/2026-10-11/pagina-06.jpg", "alt": "Carta, página 6" }
+  ],
+  "pdf": null,
+  "anterior": null
+}

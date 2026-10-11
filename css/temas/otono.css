@@ -1,0 +1,26 @@
+/* Tema "otono" (Otoño). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #8a4b22;
+  --color-primario-oscuro: #3b2414;
+  --color-acento: #b4532a;
+  --color-detalle: #e9a23b;
+  --color-fondo: #fdf7ee;
+  --color-fondo-alterno: #f5e9d8;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(59, 36, 20, .22);
+  --color-boton: #8a4b22;
+  --color-boton-hover: #733e1c;
+  --color-boton-activo: #5d3216;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #f0c27b;
+  --color-boton-destacado-activo: #e9a23b;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "🍂 Llega el otoño: sabores para entrar en calor 🍁";
+  --tema-anuncio-fondo: #3b2414;
+  --tema-anuncio-texto: #f0c27b;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(59, 36, 20, .82), rgba(59, 36, 20, .45) 55%, rgba(59, 36, 20, .08));
+  --tema-decoracion: "🍂 🍁 🍄";
+  --tema-decoracion-cta: "🍁 🍂";
+}

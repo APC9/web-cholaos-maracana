@@ -1,0 +1,26 @@
+/* Tema "rebajas" (Rebajas). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #c62828;
+  --color-primario-oscuro: #1f1f1f;
+  --color-acento: #c62828;
+  --color-detalle: #ffcc00;
+  --color-fondo: #fffaf7;
+  --color-fondo-alterno: #fdecea;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(31, 31, 31, .22);
+  --color-boton: #c62828;
+  --color-boton-hover: #a61f1f;
+  --color-boton-activo: #861818;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #ffcc00;
+  --color-boton-destacado-activo: #e6b800;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "🏷️ ¡Rebajas! Pregunta por nuestras promociones 🛍️";
+  --tema-anuncio-fondo: #c62828;
+  --tema-anuncio-texto: #ffffff;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(31, 31, 31, .82), rgba(31, 31, 31, .45) 55%, rgba(31, 31, 31, .08));
+  --tema-decoracion: "🏷️ 🛍️ 💸";
+  --tema-decoracion-cta: "🛍️ 🏷️";
+}

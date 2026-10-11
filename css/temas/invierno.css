@@ -1,0 +1,26 @@
+/* Tema "invierno" (Invierno). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #2f5d8a;
+  --color-primario-oscuro: #16273a;
+  --color-acento: #2f6fa3;
+  --color-detalle: #cfe3f5;
+  --color-fondo: #f8fbfe;
+  --color-fondo-alterno: #e9f1f8;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(22, 39, 58, .22);
+  --color-boton: #2f5d8a;
+  --color-boton-hover: #264d73;
+  --color-boton-activo: #1e3d5c;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #cfe3f5;
+  --color-boton-destacado-activo: #b4d2ee;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "❄️ Abrígate con algo rico este invierno ☕";
+  --tema-anuncio-fondo: #16273a;
+  --tema-anuncio-texto: #cfe3f5;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(22, 39, 58, .82), rgba(22, 39, 58, .45) 55%, rgba(22, 39, 58, .08));
+  --tema-decoracion: "❄️ ⛄ ✨";
+  --tema-decoracion-cta: "❄️ ☕";
+}

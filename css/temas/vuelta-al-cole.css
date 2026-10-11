@@ -1,0 +1,26 @@
+/* Tema "vuelta-al-cole" (Vuelta al cole). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #1b65a6;
+  --color-primario-oscuro: #0f2e4a;
+  --color-acento: #c8431f;
+  --color-detalle: #ffd23f;
+  --color-fondo: #fffdf5;
+  --color-fondo-alterno: #eaf3fb;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(15, 46, 74, .22);
+  --color-boton: #1b65a6;
+  --color-boton-hover: #165590;
+  --color-boton-activo: #124577;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #ffd23f;
+  --color-boton-destacado-activo: #f5c400;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "🎒 ¡Vuelta al cole! Recarga energía con un batido 📚";
+  --tema-anuncio-fondo: #0f2e4a;
+  --tema-anuncio-texto: #ffd23f;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(15, 46, 74, .82), rgba(15, 46, 74, .45) 55%, rgba(15, 46, 74, .08));
+  --tema-decoracion: "🎒 ✏️ 📚";
+  --tema-decoracion-cta: "📚 🍎";
+}

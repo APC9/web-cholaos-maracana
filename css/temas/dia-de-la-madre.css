@@ -1,0 +1,26 @@
+/* Tema "dia-de-la-madre" (Día de la Madre). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #a23b72;
+  --color-primario-oscuro: #45162f;
+  --color-acento: #b8466f;
+  --color-detalle: #f6c1d4;
+  --color-fondo: #fff8fa;
+  --color-fondo-alterno: #fbeaf1;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(69, 22, 47, .22);
+  --color-boton: #a23b72;
+  --color-boton-hover: #88315f;
+  --color-boton-activo: #6e284d;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #f6c1d4;
+  --color-boton-destacado-activo: #f0a6c1;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "💐 ¡Feliz Día de la Madre! Sorpréndela con algo rico 💖";
+  --tema-anuncio-fondo: #a23b72;
+  --tema-anuncio-texto: #ffffff;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(69, 22, 47, .82), rgba(69, 22, 47, .45) 55%, rgba(69, 22, 47, .08));
+  --tema-decoracion: "💐 💖 🌸";
+  --tema-decoracion-cta: "💖 💐";
+}

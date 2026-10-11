@@ -1,0 +1,26 @@
+/* Tema "navidad" (Navidad). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #1e6b3a;
+  --color-primario-oscuro: #0f3320;
+  --color-acento: #c0392b;
+  --color-detalle: #f2c94c;
+  --color-fondo: #fffaf2;
+  --color-fondo-alterno: #f3f0e4;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(15, 51, 32, .22);
+  --color-boton: #1e6b3a;
+  --color-boton-hover: #185a30;
+  --color-boton-activo: #124826;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #f2c94c;
+  --color-boton-destacado-activo: #e8b923;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "🎄 ¡Feliz Navidad! Celebra con Maracaná ✨";
+  --tema-anuncio-fondo: #0f3320;
+  --tema-anuncio-texto: #f2c94c;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(15, 51, 32, .82), rgba(15, 51, 32, .45) 55%, rgba(15, 51, 32, .08));
+  --tema-decoracion: "🎄 ❄️ ⭐";
+  --tema-decoracion-cta: "🎁 🎄";
+}

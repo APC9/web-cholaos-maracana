@@ -1,0 +1,26 @@
+/* Tema "verano" (Verano). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #0f6e8c;
+  --color-primario-oscuro: #0b3a4a;
+  --color-acento: #c2552a;
+  --color-detalle: #ffd166;
+  --color-fondo: #fffbf2;
+  --color-fondo-alterno: #e8f6f8;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(11, 58, 74, .22);
+  --color-boton: #0f6e8c;
+  --color-boton-hover: #0c5a73;
+  --color-boton-activo: #09475b;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #ffd166;
+  --color-boton-destacado-activo: #ffc233;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "☀️ ¡Feliz verano! Refréscate con nuestros bubble teas 🧋";
+  --tema-anuncio-fondo: #0b3a4a;
+  --tema-anuncio-texto: #ffd166;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(11, 58, 74, .82), rgba(11, 58, 74, .45) 55%, rgba(11, 58, 74, .08));
+  --tema-decoracion: "☀️ 🍉 🌴";
+  --tema-decoracion-cta: "🍹 ☀️";
+}

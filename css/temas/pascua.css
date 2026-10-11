@@ -1,0 +1,26 @@
+/* Tema "pascua" (Pascua). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #4f6e31;
+  --color-primario-oscuro: #2d3d1d;
+  --color-acento: #a24f8f;
+  --color-detalle: #f7e07c;
+  --color-fondo: #fffcf3;
+  --color-fondo-alterno: #f1f6e8;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(45, 61, 29, .22);
+  --color-boton: #4f6e31;
+  --color-boton-hover: #425c29;
+  --color-boton-activo: #354a21;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #f7e07c;
+  --color-boton-destacado-activo: #f2d34f;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "🐣 ¡Feliz Pascua! Disfruta de algo dulce 🌷";
+  --tema-anuncio-fondo: #2d3d1d;
+  --tema-anuncio-texto: #f7e07c;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(45, 61, 29, .82), rgba(45, 61, 29, .45) 55%, rgba(45, 61, 29, .08));
+  --tema-decoracion: "🐣 🥚 🌷";
+  --tema-decoracion-cta: "🥚 🐰";
+}

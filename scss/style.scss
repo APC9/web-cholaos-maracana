@@ -1,0 +1,19 @@
+@import 'general/font';
+@import 'general/reset';
+@import 'general/mixin';
+@import 'general/variables';
+@import 'general/generales';
+@import 'general/mediaq';
+
+// COMPONENTES
+
+@import 'general/componentes';
+
+// LAYOUT
+
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/about';
+@import 'layout/ofertas';
+@import 'layout/menu';
+@import 'layout/footer';

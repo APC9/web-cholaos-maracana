@@ -1,0 +1,26 @@
+/* Tema "dia-del-padre" (Día del Padre). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #1f4e79;
+  --color-primario-oscuro: #13263a;
+  --color-acento: #a5581a;
+  --color-detalle: #f2b84b;
+  --color-fondo: #fafbfc;
+  --color-fondo-alterno: #eaf0f6;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(19, 38, 58, .22);
+  --color-boton: #1f4e79;
+  --color-boton-hover: #193f62;
+  --color-boton-activo: #13314b;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #f2c46d;
+  --color-boton-destacado-activo: #f2b84b;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "👔 ¡Feliz Día del Padre! Invítale a algo rico 💙";
+  --tema-anuncio-fondo: #1f4e79;
+  --tema-anuncio-texto: #ffffff;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(19, 38, 58, .82), rgba(19, 38, 58, .45) 55%, rgba(19, 38, 58, .08));
+  --tema-decoracion: "👔 💙 🏆";
+  --tema-decoracion-cta: "💙 👔";
+}

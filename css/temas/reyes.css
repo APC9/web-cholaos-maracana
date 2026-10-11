@@ -1,0 +1,26 @@
+/* Tema "reyes" (Reyes). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #6b3fa0;
+  --color-primario-oscuro: #2c1747;
+  --color-acento: #8a5a00;
+  --color-detalle: #f1c40f;
+  --color-fondo: #fffaf0;
+  --color-fondo-alterno: #f4eefb;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(44, 23, 71, .22);
+  --color-boton: #6b3fa0;
+  --color-boton-hover: #5a3487;
+  --color-boton-activo: #48296d;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #f6d860;
+  --color-boton-destacado-activo: #f1c40f;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "👑 ¡Felices Reyes! Endulza el día con Maracaná 🎁";
+  --tema-anuncio-fondo: #2c1747;
+  --tema-anuncio-texto: #f6d860;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(44, 23, 71, .82), rgba(44, 23, 71, .45) 55%, rgba(44, 23, 71, .08));
+  --tema-decoracion: "👑 🐪 ⭐";
+  --tema-decoracion-cta: "🎁 👑";
+}

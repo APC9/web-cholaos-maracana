@@ -1,0 +1,84 @@
+@import url("temas/original.css");
+
+/*
+  TEMA DE LA WEB: es el ÚNICO archivo que hay que tocar para cambiar de tema o de colores.
+
+  Cambiar de tema: cambia SOLO la primera línea de este archivo (el @import), que debe ser
+  la primera regla y ocupar una línea: @import url("temas/<nombre>.css");
+  El @import va antes de este comentario porque CSS ignora cualquier @import que tenga una regla antes.
+
+  Temas disponibles (css/temas/):
+    original         la web tal cual (sin tema)
+    Estaciones:      primavera, verano, otono, invierno
+    Fiestas y días:  reyes, rebajas, san-valentin, dia-del-padre, pascua,
+                     dia-de-la-madre, vuelta-al-cole, halloween, black-friday,
+                     navidad, nochevieja
+
+  Volver a la web normal: @import url("temas/original.css"); y dejar vacío el bloque :root de abajo.
+
+  No borrar nunca estos comentarios ni el bloque de decoración del final.
+*/
+
+:root {
+  /* Colores personalizados del cliente (opcional; mandan sobre el tema). Ejemplo:
+     --color-boton: #c62828; */
+}
+
+/* ------------------------------------------------------------------
+   Decoración del tema (no editar: se controla con las variables de css/temas/)
+   - Franja de anuncio bajo el menú (.hero::before): --tema-anuncio, --tema-anuncio-fondo, --tema-anuncio-texto
+   - Fondo de la portada sobre la foto (.hero-shade): --tema-fondo-hero
+   - Emojis en la portada (.hero::after): --tema-decoracion
+   - Emojis en el contacto, la llamada final (.contact-section::before): --tema-decoracion-cta
+   ------------------------------------------------------------------ */
+.hero::before {
+  content: var(--tema-anuncio, none);
+  position: absolute;
+  z-index: 2;
+  top: 94px;
+  right: 0;
+  left: 0;
+  padding: 9px 20px;
+  background: var(--tema-anuncio-fondo, var(--color-primario-oscuro));
+  color: var(--tema-anuncio-texto, var(--color-texto-invertido));
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+.hero-shade { background: var(--tema-fondo-hero, linear-gradient(90deg, rgba(24, 37, 29, .77), rgba(24, 37, 29, .47) 47%, rgba(24, 37, 29, .05))); }
+.hero::after {
+  content: var(--tema-decoracion, none);
+  position: absolute;
+  z-index: 1;
+  top: 160px;
+  right: clamp(20px, 6vw, 90px);
+  font-size: clamp(30px, 4vw, 50px);
+  letter-spacing: .2em;
+  pointer-events: none;
+  animation: tema-flotar 4s ease-in-out infinite;
+}
+.contact-section { position: relative; overflow: hidden; }
+.contact-section::before {
+  content: var(--tema-decoracion-cta, none);
+  position: absolute;
+  top: 40px;
+  right: max(24px, calc((100% - 1160px) / 2));
+  font-size: 30px;
+  letter-spacing: .2em;
+  pointer-events: none;
+  animation: tema-flotar 5s ease-in-out infinite;
+}
+@keyframes tema-flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@media (max-width: 620px) {
+  .hero::before { top: 78px; padding: 8px 14px; font-size: 12px; }
+  .hero-shade { background: var(--tema-fondo-hero, linear-gradient(0deg, rgba(24, 37, 29, .78), rgba(24, 37, 29, .13) 90%)); }
+  .hero::after { top: 140px; right: 18px; font-size: 26px; }
+  .contact-section::before { top: 28px; right: 20px; font-size: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero::after, .contact-section::before { animation: none; }
+}

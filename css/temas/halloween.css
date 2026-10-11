@@ -1,0 +1,26 @@
+/* Tema "halloween" (Halloween). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #2e1043;
+  --color-primario-oscuro: #1a0827;
+  --color-acento: #a8480a;
+  --color-detalle: #ffa62b;
+  --color-fondo: #fff6ec;
+  --color-fondo-alterno: #f6ecf9;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(46, 16, 67, .22);
+  --color-boton: #2e1043;
+  --color-boton-hover: #43195f;
+  --color-boton-activo: #1f0a2e;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #ffa62b;
+  --color-boton-destacado-activo: #ff9100;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "🎃 ¡Feliz Halloween! 🦇";
+  --tema-anuncio-fondo: #2e1043;
+  --tema-anuncio-texto: #ffa62b;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(46, 16, 67, .82), rgba(46, 16, 67, .45) 55%, rgba(46, 16, 67, .08));
+  --tema-decoracion: "🦇 🎃 👻";
+  --tema-decoracion-cta: "🎃 🕸️";
+}

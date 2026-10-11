@@ -1,0 +1,26 @@
+/* Tema "black-friday" (Black Friday). Solo variables: no añadir selectores. */
+:root {
+  --color-primario: #111111;
+  --color-primario-oscuro: #000000;
+  --color-acento: #c8102e;
+  --color-detalle: #ffd400;
+  --color-fondo: #fafafa;
+  --color-fondo-alterno: #ededed;
+  --color-superficie: #ffffff;
+  --color-fondo-icono: rgba(255, 255, 255, .6);
+  --color-borde: rgba(0, 0, 0, .22);
+  --color-boton: #111111;
+  --color-boton-hover: #2b2b2b;
+  --color-boton-activo: #000000;
+  --color-boton-texto: #ffffff;
+  --color-boton-destacado-hover: #ffd400;
+  --color-boton-destacado-activo: #e6bf00;
+  --color-texto-invertido: #ffffff;
+
+  --tema-anuncio: "🖤 BLACK FRIDAY · Promociones especiales solo estos días 🖤";
+  --tema-anuncio-fondo: #000000;
+  --tema-anuncio-texto: #ffd400;
+  --tema-fondo-hero: linear-gradient(20deg, rgba(0, 0, 0, .82), rgba(0, 0, 0, .45) 55%, rgba(0, 0, 0, .08));
+  --tema-decoracion: "🖤 🛍️ ⚡";
+  --tema-decoracion-cta: "⚡ 🖤";
+}
