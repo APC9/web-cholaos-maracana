@@ -684,11 +684,33 @@ img { display: block; max-width: 100%; }
 }
 
 .featured-menu-link { display: flex; justify-content: flex-end; margin: 28px 0 0; }
-.full-menu-section { padding: 100px 0 112px; background: var(--color-fondo); }
-.menu-carousel { min-width: 0; }
-.menu-carousel-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
-.menu-page-count, .menu-page-label { color: var(--muted); font-size: 12px; font-weight: 700; }
-.menu-carousel-controls { display: flex; gap: 8px; }
+/* Carta en forma de libro (js/carta-libro.js) */
+.full-menu-section { padding: 100px 0 112px; background-color: var(--color-primario-oscuro); background-image: radial-gradient(rgba(255, 255, 255, .07) .8px, transparent .8px); background-size: 14px 14px; color: var(--color-texto-invertido); }
+.full-menu-section .section-heading > p { color: rgba(255, 255, 255, .74); }
+.menu-carousel { display: grid; min-width: 0; justify-items: center; }
+.carta-libro { position: relative; width: min(100%, 460px); padding: 14px 14px 18px; border-radius: 8px; background: var(--brand-pink); box-shadow: 0 34px 70px rgba(0, 0, 0, .5), inset 0 0 0 2px rgba(255, 255, 255, .2); }
+.carta-libro.es-doble { width: min(100%, 1040px, calc((100svh - 190px) * 4 / 3 + 28px)); }
+.carta-escena { position: relative; display: grid; grid-template-columns: 1fr; aspect-ratio: 2 / 3; background: var(--color-superficie); box-shadow: 0 3px 0 #efe9dc, 0 6px 0 #e2dbcb, 0 12px 20px rgba(0, 0, 0, .3); perspective: 2400px; touch-action: pan-y; }
+.carta-libro.es-doble .carta-escena { grid-template-columns: 1fr 1fr; aspect-ratio: 4 / 3; }
+.carta-escena:focus-visible { outline: 3px solid var(--color-detalle); outline-offset: 6px; }
+.carta-hoja { position: relative; display: block; width: 100%; height: 100%; min-width: 0; overflow: hidden; padding: 0; border: 0; background: var(--color-superficie); cursor: zoom-in; }
+.carta-hoja:disabled { cursor: default; }
+.carta-hoja:focus-visible { outline: 3px solid var(--color-detalle); outline-offset: -3px; }
+.carta-hoja img, .carta-cara img { width: 100%; height: 100%; object-fit: contain; -webkit-user-drag: none; user-select: none; }
+.carta-hoja img:not([src]) { visibility: hidden; }
+.carta-libro.es-doble .carta-hoja::after { position: absolute; inset: 0; pointer-events: none; content: ''; }
+.carta-libro.es-doble .carta-hoja-izq::after { background: linear-gradient(to left, rgba(0, 0, 0, .2), transparent 8%); }
+.carta-libro.es-doble .carta-hoja-der::after { background: linear-gradient(to right, rgba(0, 0, 0, .22), transparent 8%); }
+.carta-giro { position: absolute; z-index: 3; top: 0; bottom: 0; left: 0; width: 100%; pointer-events: none; transform-origin: left center; transform-style: preserve-3d; }
+.carta-giro-der { left: 50%; width: 50%; }
+.carta-giro-izq { width: 50%; transform-origin: right center; }
+.carta-cara { position: absolute; inset: 0; overflow: hidden; background: var(--color-superficie); box-shadow: 0 0 30px rgba(0, 0, 0, .28); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.carta-cara::after { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0, 0, 0, .14), transparent 25%, transparent 75%, rgba(0, 0, 0, .14)); content: ''; }
+.carta-cara-dorso { transform: rotateY(180deg); }
+.menu-carousel-toolbar { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 34px; }
+.carta-indicador { min-width: 170px; font-family: var(--serif); font-size: 19px; font-weight: 600; text-align: center; }
+.carta-ayuda { margin: 10px 0 0; color: rgba(255, 255, 255, .7); font-size: 12px; text-align: center; }
+.carta-ayuda .menu-page-count { color: inherit; font-size: inherit; }
 .carousel-control, .viewer-close, .viewer-step {
   display: inline-grid;
   width: 44px;
@@ -701,38 +723,19 @@ img { display: block; max-width: 100%; }
   cursor: pointer;
   font: inherit;
   font-size: 20px;
-  transition: background .2s ease, color .2s ease, border-color .2s ease;
+  transition: background .2s ease, color .2s ease, border-color .2s ease, opacity .2s ease;
 }
-.carousel-control:hover, .viewer-close:hover, .viewer-step:hover { border-color: var(--color-primario); background: var(--color-primario); color: var(--color-texto-invertido); }
-.menu-carousel-track {
-  display: flex;
-  gap: 18px;
-  overflow-x: auto;
-  padding: 2px 2px 16px;
-  overscroll-behavior-inline: contain;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  scrollbar-color: var(--color-primario) rgba(72, 107, 85, .14);
-  scrollbar-width: thin;
-  -webkit-overflow-scrolling: touch;
-}
-.menu-page-slide { flex: 0 0 clamp(230px, 27vw, 330px); min-width: 0; scroll-snap-align: start; }
-.menu-page-open {
-  display: block;
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  padding: 0;
-  border: 1px solid rgba(38, 53, 45, .12);
-  background: var(--color-superficie);
-  box-shadow: 0 8px 24px rgba(38, 53, 45, .08);
-  cursor: zoom-in;
-  transition: box-shadow .2s ease, transform .2s ease;
-}
-.menu-page-open:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(38, 53, 45, .16); }
+.carousel-control { width: 52px; height: 52px; background: var(--color-detalle); box-shadow: 0 6px 18px rgba(0, 0, 0, .3); font-size: 22px; font-weight: 700; }
+.carousel-control:disabled { opacity: .35; cursor: default; }
+.carousel-control:not(:disabled):hover, .viewer-close:hover, .viewer-step:hover { border-color: var(--color-primario); background: var(--color-primario); color: var(--color-texto-invertido); }
 .menu-page-open:focus-visible, .carousel-control:focus-visible, .viewer-close:focus-visible, .viewer-step:focus-visible { outline: 3px solid var(--brand-pink); outline-offset: 3px; }
-.menu-page-open img { width: 100%; height: 100%; object-fit: contain; }
-.menu-page-label { display: block; padding: 12px 2px 0; }
+.menu-carousel-track { display: flex; max-width: 100%; min-height: 118px; gap: 10px; overflow-x: auto; margin-top: 22px; padding: 8px 4px 10px; scroll-snap-type: x proximity; scrollbar-color: rgba(255, 255, 255, .35) transparent; scrollbar-width: thin; }
+.menu-page-slide { flex: 0 0 60px; scroll-snap-align: center; text-align: center; }
+.menu-page-open { display: block; width: 100%; aspect-ratio: 2 / 3; overflow: hidden; padding: 0; border: 2px solid transparent; background: var(--color-superficie); cursor: pointer; opacity: .55; transition: opacity .2s ease, transform .2s ease, border-color .2s ease; }
+.menu-page-open:hover { opacity: .9; }
+.menu-page-open.es-actual { border-color: var(--color-detalle); opacity: 1; transform: translateY(-4px); }
+.menu-page-open img { width: 100%; height: 100%; object-fit: cover; }
+.menu-page-label { display: block; padding-top: 6px; color: rgba(255, 255, 255, .7); font-size: 11px; font-weight: 700; }
 .menu-viewer {
   position: fixed;
   inset: 0;
@@ -799,8 +802,9 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 620px) {
   .full-menu-section { padding: 76px 0 84px; }
-  .menu-page-slide { flex-basis: min(78vw, 320px); }
-  .menu-carousel-track { gap: 12px; margin-right: 0; padding-right: 20px; }
+  .carta-libro { padding: 9px 9px 13px; }
+  .menu-carousel-toolbar { margin-top: 26px; }
+  .carta-indicador { min-width: 130px; font-size: 17px; }
   .menu-viewer { padding: 12px; }
   .viewer-image { max-width: 100%; max-height: calc(100dvh - 104px); }
   .viewer-step { top: auto; bottom: 8px; transform: none; }
@@ -843,12 +847,10 @@ img { display: block; max-width: 100%; }
 .sugerencia-texto::before { display: block; margin-bottom: 8px; color: var(--color-detalle); font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; content: '★ Plato recomendado ★'; }
 .sugerencia-texto:empty { display: none; }
 .sugerencia-pdf, .menu-carousel-pdf { margin-top: 22px; }
-.menu-carousel-track:empty { min-height: calc(clamp(230px, 27vw, 330px) * 4 / 3 + 48px); }
 .sugerencia-pdf:focus-visible, .menu-carousel-pdf:focus-visible { outline: 3px solid var(--brand-pink); outline-offset: 3px; }
 
 @media (max-width: 620px) {
   .sugerencia { padding: 76px 0 84px; }
   .sugerencia-imagenes { gap: 12px; }
   .sugerencia-texto { margin-top: -18px; padding: 18px 18px 20px; }
-  .menu-carousel-track:empty { min-height: calc(min(78vw, 320px) * 4 / 3 + 48px); }
 }

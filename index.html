@@ -138,17 +138,22 @@
                               <p class="eyebrow">La carta completa</p>
                               <h2>El menú <span>Maracaná</span></h2>
                          </div>
-                         <p>Desliza para explorar las páginas. Selecciona una para verla ampliada.</p>
+                         <p>Pasa las páginas como en un libro. Toca una página para verla en grande.</p>
                     </div>
-                    <div class="menu-carousel" role="region" aria-label="Carrusel de páginas del menú">
-                         <div class="menu-carousel-toolbar">
-                              <span class="menu-page-count" data-carta-contador></span>
-                              <div class="menu-carousel-controls">
-                                   <button class="carousel-control" type="button" data-scroll="-1" aria-label="Desplazar menú hacia la izquierda">←</button>
-                                   <button class="carousel-control" type="button" data-scroll="1" aria-label="Desplazar menú hacia la derecha">→</button>
+                    <div class="menu-carousel" role="region" aria-roledescription="carrusel" aria-label="Carta de Maracaná">
+                         <div class="carta-libro">
+                              <div class="carta-escena" tabindex="0" aria-label="Carta abierta. Usa las flechas del teclado para pasar página.">
+                                   <button class="carta-hoja carta-hoja-izq" type="button"><img alt=""></button>
+                                   <button class="carta-hoja carta-hoja-der" type="button"><img alt=""></button>
                               </div>
                          </div>
-                         <div class="menu-carousel-track" tabindex="0" aria-label="Páginas del menú; usa las flechas para desplazarte" data-carta></div>
+                         <div class="menu-carousel-toolbar">
+                              <button class="carousel-control" type="button" data-pagina="-1" aria-label="Página anterior">←</button>
+                              <span class="carta-indicador" aria-live="polite"></span>
+                              <button class="carousel-control" type="button" data-pagina="1" aria-label="Página siguiente">→</button>
+                         </div>
+                         <p class="carta-ayuda"><span class="menu-page-count" data-carta-contador></span> · Desliza o usa las flechas para pasar página</p>
+                         <div class="menu-carousel-track" aria-label="Todas las páginas de la carta" data-carta></div>
                          <a class="text-link menu-carousel-pdf" data-carta-pdf hidden download>Descargar carta (PDF) <span aria-hidden="true">↓</span></a>
                     </div>
                </div>
@@ -237,7 +242,7 @@
      <!-- FIN SECCIÓN: Pie de página -->
 
      <!-- SECCIÓN: Botón de WhatsApp y aviso de cookies -->
-     <a class="whatsapp-fab" href="https://wa.me/34662102911?text=Hola%2C%20quiero%20consultar%20el%20men%C3%BA%20de%20Cholaos%20Maracan%C3%A1" target="_blank" rel="noopener noreferrer" aria-label="Contactar a Cholaos Maracaná por WhatsApp" style="bottom: 80px"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+     <a class="whatsapp-fab" href="https://wa.me/34662102911?text=Hola%2C%20quiero%20consultar%20el%20men%C3%BA%20de%20Cholaos%20Maracan%C3%A1" target="_blank" rel="noopener noreferrer" aria-label="Contactar a Cholaos Maracaná por WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
      <aside class="cookie-banner" id="cookie-banner" aria-labelledby="cookie-title" aria-describedby="cookie-copy" hidden>
           <div class="cookie-copy">
                <h2 id="cookie-title">Tu privacidad importa</h2>
@@ -250,69 +255,6 @@
      </aside>
      <!-- FIN SECCIÓN: Botón de WhatsApp y aviso de cookies -->
      <script>
-          const carousel = document.querySelector('.menu-carousel-track');
-          const pageButtons = [];
-          const viewer = document.querySelector('#menu-viewer');
-          const viewerImage = viewer.querySelector('.viewer-image');
-          const viewerCount = viewer.querySelector('.viewer-count');
-          let activePage = 0;
-
-          document.querySelectorAll('[data-scroll]').forEach((button) => {
-               button.addEventListener('click', () => {
-                    carousel.scrollBy({ left: Number(button.dataset.scroll) * carousel.clientWidth * .8, behavior: 'smooth' });
-               });
-          });
-
-          const showPage = (index) => {
-               activePage = (index + pageButtons.length) % pageButtons.length;
-               const thumbnail = pageButtons[activePage].querySelector('img');
-               viewerImage.src = thumbnail.src;
-               viewerImage.alt = `Menú, página ${activePage + 1} de ${pageButtons.length}`;
-               viewerCount.textContent = `Página ${activePage + 1} de ${pageButtons.length}`;
-          };
-
-          // js/datos-web.js mete en el carrusel las imágenes de data/carta.json; aquí se convierten en páginas ampliables.
-          document.addEventListener('carta:lista', () => {
-               const images = [...carousel.querySelectorAll(':scope > img')];
-               pageButtons.length = 0;
-               carousel.replaceChildren(...images.map((image, index) => {
-                    const slide = document.createElement('article');
-                    const button = document.createElement('button');
-                    const label = document.createElement('span');
-                    slide.className = 'menu-page-slide';
-                    button.className = 'menu-page-open';
-                    button.type = 'button';
-                    button.setAttribute('aria-label', `Ampliar página ${index + 1} del menú`);
-                    button.addEventListener('click', () => {
-                         showPage(index);
-                         viewer.showModal();
-                    });
-                    image.alt = '';
-                    button.append(image);
-                    label.className = 'menu-page-label';
-                    label.textContent = `Página ${String(index + 1).padStart(2, '0')}`;
-                    slide.append(button, label);
-                    pageButtons.push(button);
-                    return slide;
-               }));
-          });
-
-          viewer.querySelector('.viewer-close').addEventListener('click', () => viewer.close());
-          viewer.querySelectorAll('[data-view]').forEach((button) => {
-               button.addEventListener('click', () => showPage(activePage + Number(button.dataset.view)));
-          });
-          viewer.addEventListener('click', (event) => {
-               if (event.target === viewer) viewer.close();
-          });
-          viewer.addEventListener('keydown', (event) => {
-               if (event.key === 'Escape') {
-                    event.preventDefault();
-                    viewer.close();
-               }
-               if (event.key === 'ArrowLeft') showPage(activePage - 1);
-               if (event.key === 'ArrowRight') showPage(activePage + 1);
-          });
-
           const consentKey = 'maracana-cookie-consent';
           const cookieBanner = document.querySelector('#cookie-banner');
           const fontsLink = document.querySelector('#brand-fonts');
@@ -364,6 +306,7 @@
                document.querySelector('#accept-cookies').focus();
           });
      </script>
+     <script src="js/carta-libro.js" defer></script>
      <script src="js/datos-web.js" defer></script>
 </body>
 </html>

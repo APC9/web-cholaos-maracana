@@ -12,6 +12,7 @@ Web estática (HTML + CSS + JS, sin compilación) publicada en Netlify desde la 
 | `css/temas/*.css` | Un archivo por tema, solo con variables. No se editan. |
 | `data/carta.json`, `data/sugerencia.json` | Carta y sugerencia del día. Los reescribe la automatización (ver abajo). |
 | `js/datos-web.js` | Pinta la carta y la sugerencia a partir de los JSON. No se edita. |
+| `js/carta-libro.js` | Convierte la carta en un libro: paso de página animado, miniaturas, deslizar con el dedo y visor ampliado. No se edita. |
 | `favicon.ico`, `img/favicon/` | Icono de la pestaña y del acceso directo en el móvil, sacado de `img/logo.jpeg`. Enlazado en el `<head>` de las 4 páginas. |
 | `img/` | Imágenes de la web. `img/carta/` e `img/sugerencia/` son de la automatización. |
 | `aviso-legal.html`, `politica-de-privacidad.html`, `politica-de-cookies.html` | Páginas legales, con su propio estilo `css/legal.css` y sin tema. |
@@ -80,6 +81,6 @@ La carta y la sugerencia **no se editan en el HTML** ni con el comando `WEB`. La
 | `img/carta/AAAA-MM-DD/` | Imágenes de cada versión de la carta. |
 | `img/sugerencia/AAAA-MM-DD/` | Imágenes de cada sugerencia. |
 
-- `js/datos-web.js` pinta la carta en `[data-carta]` y lanza el evento `carta:lista`. El script de `index.html` convierte esas imágenes en páginas ampliables con el visor.
+- `js/datos-web.js` pinta la carta en `[data-carta]` y lanza el evento `carta:lista`. `js/carta-libro.js` usa esas imágenes para el libro (dos páginas en escritorio, una en el móvil) y las deja como miniaturas.
 - El contador de páginas (`[data-carta-contador]`) se calcula solo.
 - La sugerencia no caduca: se queda hasta que el cliente mande otra o la quite.
