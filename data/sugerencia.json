@@ -1,7 +1,12 @@
 {
-  "visible": false,
-  "actualizada": null,
-  "imagenes": [],
-  "texto": "",
+  "visible": true,
+  "actualizada": "2026-10-11",
+  "imagenes": [
+    {
+      "src": "img/sugerencia/2026-10-11-2128/sugerencia-01.jpg",
+      "alt": "Bebida martini 50€"
+    }
+  ],
+  "texto": "Bebida martini 50€",
   "pdf": null
 }
