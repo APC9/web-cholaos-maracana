@@ -821,8 +821,27 @@ img { display: block; max-width: 100%; }
 /* Kit de restaurante: sugerencia del día y carta (las rellena js/datos-web.js) */
 [hidden] { display: none !important; }
 .sugerencia { padding: 100px 0 112px; background: var(--color-fondo); border-bottom: 1px solid rgba(38, 53, 45, .12); }
-.sugerencia-imagenes { display: flex; flex-wrap: wrap; gap: 18px; }
+.sugerencia .section-wrap { display: flex; flex-direction: column; align-items: center; }
+.sugerencia .section-heading { display: block; text-align: center; }
+.sugerencia-imagenes { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; }
 .sugerencia-imagenes img { width: min(100%, 520px); max-height: 680px; object-fit: contain; border: 1px solid rgba(38, 53, 45, .12); background: var(--color-superficie); box-shadow: 0 8px 24px rgba(38, 53, 45, .08); }
+.sugerencia-texto {
+  position: relative;
+  width: min(100%, 520px);
+  margin: -26px 0 0;
+  padding: 22px 26px 24px;
+  background: var(--color-primario);
+  box-shadow: 0 14px 32px rgba(38, 53, 45, .2);
+  color: var(--color-texto-invertido);
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  text-wrap: balance;
+}
+.sugerencia-texto::before { display: block; margin-bottom: 8px; color: var(--color-detalle); font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; content: '★ Plato recomendado ★'; }
+.sugerencia-texto:empty { display: none; }
 .sugerencia-pdf, .menu-carousel-pdf { margin-top: 22px; }
 .menu-carousel-track:empty { min-height: calc(clamp(230px, 27vw, 330px) * 4 / 3 + 48px); }
 .sugerencia-pdf:focus-visible, .menu-carousel-pdf:focus-visible { outline: 3px solid var(--brand-pink); outline-offset: 3px; }
@@ -830,5 +849,6 @@ img { display: block; max-width: 100%; }
 @media (max-width: 620px) {
   .sugerencia { padding: 76px 0 84px; }
   .sugerencia-imagenes { gap: 12px; }
+  .sugerencia-texto { margin-top: -18px; padding: 18px 18px 20px; }
   .menu-carousel-track:empty { min-height: calc(min(78vw, 320px) * 4 / 3 + 48px); }
 }
