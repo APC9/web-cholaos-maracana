@@ -1,12 +1,12 @@
 {
-  "visible": false,
-  "actualizada": "2026-10-11",
+  "visible": true,
+  "actualizada": "2026-10-12",
   "imagenes": [
     {
-      "src": "img/sugerencia/2026-10-11-2128/sugerencia-01.jpg",
-      "alt": "Bebida martini 50€"
+      "src": "img/sugerencia/2026-10-12-2157/sugerencia-01.jpg",
+      "alt": "Bebida Cholao Maracaná. 7.5 euros"
     }
   ],
-  "texto": "Bebida martini 50€",
+  "texto": "Bebida Cholao Maracaná. 7.5 euros",
   "pdf": null
 }
