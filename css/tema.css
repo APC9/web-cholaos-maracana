@@ -1,4 +1,4 @@
-@import url("temas/halloween.css");
+@import url("temas/original.css");
 
 /*
   TEMA DE LA WEB: es el ÚNICO archivo que hay que tocar para cambiar de tema o de colores.
@@ -82,4 +82,5 @@
 @media (prefers-reduced-motion: reduce) {
   .hero::after, .contact-section::before { animation: none; }
 }
+
 
