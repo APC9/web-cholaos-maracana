@@ -1,12 +1,12 @@
 {
-  "visible": false,
-  "actualizada": "2026-10-12",
+  "visible": true,
+  "actualizada": "2026-10-16",
   "imagenes": [
     {
-      "src": "img/sugerencia/2026-10-12-2157/sugerencia-01.jpg",
-      "alt": "Bebida Cholao Maracaná. 7.5 euros"
+      "src": "img/sugerencia/2026-10-16-1903/sugerencia-01.jpg",
+      "alt": "Bebida mango 7,50 euros"
     }
   ],
-  "texto": "Bebida Cholao Maracaná. 7.5 euros",
+  "texto": "Bebida mango 7,50 euros",
   "pdf": null
 }
