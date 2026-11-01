@@ -1,12 +1,12 @@
 {
-  "visible": false,
-  "actualizada": "2026-10-11",
+  "visible": true,
+  "actualizada": "2026-10-16",
   "imagenes": [
     {
-      "src": "img/sugerencia/2026-10-11-2128/sugerencia-01.jpg",
-      "alt": "Bebida martini 50€"
+      "src": "img/sugerencia/2026-10-16-1903/sugerencia-01.jpg",
+      "alt": "Bebida mango 7,50 euros"
     }
   ],
-  "texto": "Bebida martini 50€",
+  "texto": "Bebida mango 7,50 euros",
   "pdf": null
 }

@@ -1,5 +1,5 @@
 {
-  "actualizada": "2026-10-11",
+  "actualizada": "2026-10-12",
   "paginas": [
     {
       "src": "img/carta/2026-10-11/pagina-01.jpg",
@@ -28,17 +28,8 @@
   ],
   "pdf": null,
   "anterior": {
-    "actualizada": "2026-10-11",
-    "paginas": [
-      {
-        "src": "img/carta/2026-10-11-2123/pagina-01.jpg",
-        "alt": "Carta, página 1"
-      },
-      {
-        "src": "img/carta/2026-10-11-2123/pagina-02.jpg",
-        "alt": "Carta, página 2"
-      }
-    ],
-    "pdf": null
+    "actualizada": "2026-10-12",
+    "paginas": [],
+    "pdf": "img/carta/2026-10-12-2152/carta.pdf"
   }
 }
