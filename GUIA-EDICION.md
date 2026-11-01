@@ -30,7 +30,7 @@ Web estática (HTML + CSS + JS, sin compilación) publicada en Netlify desde la 
 | Productos destacados | `#productos-destacados` | 8 tarjetas (imagen, categoría y nombre). |
 | Sugerencia del día | `#sugerencia` | **No editar a mano**: ver "Carta y sugerencia del día". |
 | Carta | `#menu` | **No editar a mano**: ver "Carta y sugerencia del día". |
-| Contacto | `#contacto` | Dirección, teléfono, WhatsApp, redes sociales y mapa. |
+| Contacto | `#contacto` | Dirección, teléfono, WhatsApp, horario, redes sociales y mapa. |
 | Visor ampliado de la carta | `#menu-viewer` | Ventana que amplía una página de la carta. |
 | Pie de página | — | Logo, frase, enlaces legales y créditos. |
 | Botón de WhatsApp y aviso de cookies | `#cookie-banner` | Botón flotante de WhatsApp y aviso de cookies. |
@@ -42,7 +42,8 @@ Web estática (HTML + CSS + JS, sin compilación) publicada en Netlify desde la 
 | Teléfono (662 102 911) | `index.html`, sección Contacto: `tel:+34662102911` y el texto visible. |
 | WhatsApp | `index.html`: enlace `wa.me/34662102911` en la sección Contacto **y** en el botón flotante (`.whatsapp-fab`). Cambia los dos. |
 | Dirección (C. San Roque, 19, Loc 2, 29680 Estepona) | `index.html`, sección Contacto: texto, enlace "Cómo llegar" y `data-src` del mapa. |
-| Redes sociales | `index.html`, sección Contacto, `.social-links`. |
+| Horario | `index.html`, sección Contacto, `#horario`. |
+| Redes sociales y perfil de Google | `index.html`, sección Contacto, `.social-links`. |
 | Textos de la portada y de Nosotros | `index.html`, secciones Portada y Nosotros. |
 | Productos destacados | `index.html`, sección Productos destacados: cada `<article class="menu-item">`. |
 | Título y descripción para Google | `index.html`, `<title>` y `<meta name="description">`. |
