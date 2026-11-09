@@ -1,26 +1,31 @@
-/* Tema "nochevieja" (Nochevieja). Solo variables: no añadir selectores. */
+/* Tema "nochevieja". Solo variables: no añadir selectores.
+   Las ilustraciones (sello, icono y bandas) están en img/temas/nochevieja/. */
 :root {
-  --color-primario: #1d2a4d;
-  --color-primario-oscuro: #0b1120;
+  --color-primario: #2a2f3a;
+  --color-primario-oscuro: #12141a;
   --color-acento: #8a6a12;
-  --color-detalle: #e6c35c;
-  --color-fondo: #fbf9f4;
-  --color-fondo-alterno: #efece3;
+  --color-detalle: #e6c766;
+  --color-fondo: #faf7f0;
+  --color-fondo-alterno: #efeadf;
   --color-superficie: #ffffff;
   --color-fondo-icono: rgba(255, 255, 255, .6);
-  --color-borde: rgba(11, 17, 32, .22);
-  --color-boton: #1d2a4d;
-  --color-boton-hover: #2a3a66;
-  --color-boton-activo: #121b33;
+  --color-borde: rgba(18, 20, 26, .18);
+  --color-boton: #12141a;
+  --color-boton-hover: #2a2f3a;
+  --color-boton-activo: #000000;
   --color-boton-texto: #ffffff;
-  --color-boton-destacado-hover: #e6c35c;
-  --color-boton-destacado-activo: #d4ad3c;
+  --color-boton-destacado-hover: #e6c766;
+  --color-boton-destacado-activo: #e6c766;
   --color-texto-invertido: #ffffff;
 
-  --tema-anuncio: "🥂 ¡Feliz Año Nuevo! Gracias por acompañarnos 🎆";
-  --tema-anuncio-fondo: #0b1120;
-  --tema-anuncio-texto: #e6c35c;
-  --tema-fondo-hero: linear-gradient(20deg, rgba(11, 17, 32, .82), rgba(11, 17, 32, .45) 55%, rgba(11, 17, 32, .08));
-  --tema-decoracion: "🎆 🥂 ✨";
-  --tema-decoracion-cta: "🥂 🎉";
+  /* Decoración del tema (la pinta el bloque final de css/tema.css) */
+  --tema-activo: block;
+  --tema-anuncio: "Despide el año con nosotros · Encarga tequeños y empanadas para tu fiesta";
+  --tema-anuncio-fondo: #12141a;
+  --tema-anuncio-texto: #e6c766;
+  --tema-sello: url("/img/temas/nochevieja/sello.svg");
+  --tema-icono: url("/img/temas/nochevieja/icono.svg");
+  --tema-banda: url("/img/temas/nochevieja/banda.svg") left center / auto 100% repeat-x;
+  --tema-banda-vertical: url("/img/temas/nochevieja/banda-v.svg") center top / 100% auto repeat-y;
+  --tema-banda-alto: 24px;
 }

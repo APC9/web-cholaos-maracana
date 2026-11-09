@@ -1,35 +1,19 @@
 {
-  "actualizada": "2026-10-12",
+  "actualizada": "2026-11-09",
   "paginas": [
     {
-      "src": "img/carta/2026-10-11/pagina-01.jpg",
-      "alt": "Carta, página 1"
+      "src": "img/carta/2026-11-09/pagina-01.jpg",
+      "alt": "Carta, página 1: salados sudamericanos y desayunos"
     },
     {
-      "src": "img/carta/2026-10-11/pagina-02.jpg",
-      "alt": "Carta, página 2"
+      "src": "img/carta/2026-11-09/pagina-02.jpg",
+      "alt": "Carta, página 2: cafés, batidos y bebidas"
     },
     {
-      "src": "img/carta/2026-10-11/pagina-03.jpg",
-      "alt": "Carta, página 3"
-    },
-    {
-      "src": "img/carta/2026-10-11/pagina-04.jpg",
-      "alt": "Carta, página 4"
-    },
-    {
-      "src": "img/carta/2026-10-11/pagina-05.jpg",
-      "alt": "Carta, página 5"
-    },
-    {
-      "src": "img/carta/2026-10-11/pagina-06.jpg",
-      "alt": "Carta, página 6"
+      "src": "img/carta/2026-11-09/pagina-03.jpg",
+      "alt": "Carta, página 3: comida por encargo"
     }
   ],
-  "pdf": null,
-  "anterior": {
-    "actualizada": "2026-10-12",
-    "paginas": [],
-    "pdf": "img/carta/2026-10-12-2152/carta.pdf"
-  }
+  "pdf": "img/carta/2026-11-09/carta.pdf",
+  "anterior": null
 }

@@ -1,26 +1,31 @@
-/* Tema "halloween" (Halloween). Solo variables: no añadir selectores. */
+/* Tema "halloween". Solo variables: no añadir selectores.
+   Las ilustraciones (sello, icono y bandas) están en img/temas/halloween/. */
 :root {
-  --color-primario: #2e1043;
-  --color-primario-oscuro: #1a0827;
-  --color-acento: #a8480a;
-  --color-detalle: #ffa62b;
-  --color-fondo: #fff6ec;
-  --color-fondo-alterno: #f6ecf9;
+  --color-primario: #3b2a4d;
+  --color-primario-oscuro: #1c1326;
+  --color-acento: #c2410c;
+  --color-detalle: #f59e0b;
+  --color-fondo: #fbf6ef;
+  --color-fondo-alterno: #f1ebe3;
   --color-superficie: #ffffff;
   --color-fondo-icono: rgba(255, 255, 255, .6);
-  --color-borde: rgba(46, 16, 67, .22);
-  --color-boton: #2e1043;
-  --color-boton-hover: #43195f;
-  --color-boton-activo: #1f0a2e;
+  --color-borde: rgba(28, 19, 38, .18);
+  --color-boton: #c2410c;
+  --color-boton-hover: #a3370a;
+  --color-boton-activo: #852d08;
   --color-boton-texto: #ffffff;
-  --color-boton-destacado-hover: #ffa62b;
-  --color-boton-destacado-activo: #ff9100;
+  --color-boton-destacado-hover: #f59e0b;
+  --color-boton-destacado-activo: #f59e0b;
   --color-texto-invertido: #ffffff;
 
-  --tema-anuncio: "🎃 ¡Feliz Halloween! 🦇";
-  --tema-anuncio-fondo: #2e1043;
-  --tema-anuncio-texto: #ffa62b;
-  --tema-fondo-hero: linear-gradient(20deg, rgba(46, 16, 67, .82), rgba(46, 16, 67, .45) 55%, rgba(46, 16, 67, .08));
-  --tema-decoracion: "🦇 🎃 👻";
-  --tema-decoracion-cta: "🎃 🕸️";
+  /* Decoración del tema (la pinta el bloque final de css/tema.css) */
+  --tema-activo: block;
+  --tema-anuncio: "Feliz Halloween · Tequeños y empanadas por encargo para tu fiesta";
+  --tema-anuncio-fondo: #1c1326;
+  --tema-anuncio-texto: #f59e0b;
+  --tema-sello: url("/img/temas/halloween/sello.svg");
+  --tema-icono: url("/img/temas/halloween/icono.svg");
+  --tema-banda: url("/img/temas/halloween/banda.svg") left center / auto 100% repeat-x;
+  --tema-banda-vertical: url("/img/temas/halloween/banda-v.svg") center top / 100% auto repeat-y;
+  --tema-banda-alto: 24px;
 }

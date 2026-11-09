@@ -1,26 +1,31 @@
-/* Tema "verano" (Verano). Solo variables: no añadir selectores. */
+/* Tema "verano". Solo variables: no añadir selectores.
+   Las ilustraciones (sello, icono y bandas) están en img/temas/verano/. */
 :root {
-  --color-primario: #0f6e8c;
-  --color-primario-oscuro: #0b3a4a;
-  --color-acento: #c2552a;
-  --color-detalle: #ffd166;
-  --color-fondo: #fffbf2;
-  --color-fondo-alterno: #e8f6f8;
+  --color-primario: #0b5f86;
+  --color-primario-oscuro: #0b3a4f;
+  --color-acento: #00729f;
+  --color-detalle: #ffc93c;
+  --color-fondo: #fcf9f1;
+  --color-fondo-alterno: #eaf3f5;
   --color-superficie: #ffffff;
   --color-fondo-icono: rgba(255, 255, 255, .6);
-  --color-borde: rgba(11, 58, 74, .22);
-  --color-boton: #0f6e8c;
-  --color-boton-hover: #0c5a73;
-  --color-boton-activo: #09475b;
+  --color-borde: rgba(11, 58, 79, .18);
+  --color-boton: #00729f;
+  --color-boton-hover: #005c80;
+  --color-boton-activo: #004866;
   --color-boton-texto: #ffffff;
-  --color-boton-destacado-hover: #ffd166;
-  --color-boton-destacado-activo: #ffc233;
+  --color-boton-destacado-hover: #ffc93c;
+  --color-boton-destacado-activo: #ffc93c;
   --color-texto-invertido: #ffffff;
 
-  --tema-anuncio: "☀️ ¡Feliz verano! Refréscate con nuestros bubble teas 🧋";
-  --tema-anuncio-fondo: #0b3a4a;
-  --tema-anuncio-texto: #ffd166;
-  --tema-fondo-hero: linear-gradient(20deg, rgba(11, 58, 74, .82), rgba(11, 58, 74, .45) 55%, rgba(11, 58, 74, .08));
-  --tema-decoracion: "☀️ 🍉 🌴";
-  --tema-decoracion-cta: "🍹 ☀️";
+  /* Decoración del tema (la pinta el bloque final de css/tema.css) */
+  --tema-activo: block;
+  --tema-anuncio: "Verano en Maracaná · Tapas venezolanas para tus planes, por encargo";
+  --tema-anuncio-fondo: #0b3a4f;
+  --tema-anuncio-texto: #ffc93c;
+  --tema-sello: url("/img/temas/verano/sello.svg");
+  --tema-icono: url("/img/temas/verano/icono.svg");
+  --tema-banda: url("/img/temas/verano/banda.svg") left center / auto 100% repeat-x;
+  --tema-banda-vertical: url("/img/temas/verano/banda-v.svg") center top / 100% auto repeat-y;
+  --tema-banda-alto: 24px;
 }

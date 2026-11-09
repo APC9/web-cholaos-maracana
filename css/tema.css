@@ -1,4 +1,4 @@
-@import url("temas/halloween.css");
+@import url("temas/original.css");
 
 /*
   TEMA DE LA WEB: es el ÚNICO archivo que hay que tocar para cambiar de tema o de colores.
@@ -16,6 +16,9 @@
 
   Volver a la web normal: @import url("temas/original.css"); y dejar vacío el bloque :root de abajo.
 
+  Cambiar solo el texto de la franja de anuncio del tema activo: añade en el bloque :root de abajo
+  --tema-anuncio: "Tu texto aquí"; (entre comillas). Se quita borrando esa línea.
+
   No borrar nunca estos comentarios ni el bloque de decoración del final.
 */
 
@@ -26,67 +29,86 @@
 
 /* ------------------------------------------------------------------
    Decoración del tema (no editar: se controla con las variables de css/temas/)
-   - Franja de anuncio bajo el menú (.hero::before): --tema-anuncio, --tema-anuncio-fondo, --tema-anuncio-texto
-   - Fondo de la portada sobre la foto (.hero-shade): --tema-fondo-hero
-   - Emojis en la portada (.hero::after): --tema-decoracion
-   - Emojis en el contacto, la llamada final (.contact-section::before): --tema-decoracion-cta
+   Con el tema "original" no se ve nada de esto: solo las rayas rosa y lima de la fachada.
+   - Franja de anuncio bajo el menú (.tema-anuncio, enlaza a #encargos):
+       --tema-activo, --tema-anuncio, --tema-anuncio-fondo, --tema-anuncio-texto, --tema-icono
+   - Sello circular sobre la foto de la portada (.hero::after): --tema-sello
+   - Bandas con el motivo del tema en lugar de las rayas (.franjas):
+       --tema-banda, --tema-banda-vertical, --tema-banda-alto
+   - Icono grande junto a la dirección (.contact-section::before): --tema-icono
+   Las ilustraciones de cada tema están en img/temas/<nombre>/.
    ------------------------------------------------------------------ */
-.hero::before {
-  content: var(--tema-anuncio, none);
-  position: absolute;
-  z-index: 2;
-  top: 94px;
-  right: 0;
-  left: 0;
-  padding: 9px 20px;
+.tema-anuncio {
+  display: var(--tema-activo, none);
+  padding: 12px 20px;
   background: var(--tema-anuncio-fondo, var(--color-primario-oscuro));
   color: var(--tema-anuncio-texto, var(--color-texto-invertido));
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.4;
   text-align: center;
+  transition: filter .2s ease;
 }
-.hero-shade { background: var(--tema-fondo-hero, linear-gradient(90deg, rgba(24, 37, 29, .77), rgba(24, 37, 29, .47) 47%, rgba(24, 37, 29, .05))); }
+.tema-anuncio::before {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  background: currentColor;
+  content: '';
+  vertical-align: -3px;
+  -webkit-mask: var(--tema-icono) center / contain no-repeat;
+  mask: var(--tema-icono) center / contain no-repeat;
+}
+.tema-anuncio::after { content: var(--tema-anuncio, "") "  →"; }
+.tema-anuncio:hover { filter: brightness(1.25); }
+.tema-anuncio:hover::after { text-decoration: underline; text-underline-offset: 4px; }
+.tema-anuncio:focus-visible { outline: 3px solid var(--color-detalle); outline-offset: -3px; }
+
+.franjas { background: var(--tema-banda, repeating-linear-gradient(90deg, var(--color-acento) 0 14px, var(--color-detalle) 14px 28px)); }
+.franjas-horizontal { height: var(--tema-banda-alto, 14px); }
+.franjas-vertical { background: var(--tema-banda-vertical, repeating-linear-gradient(90deg, var(--color-acento) 0 14px, var(--color-detalle) 14px 28px)); }
+
 .hero::after {
-  content: var(--tema-decoracion, none);
   position: absolute;
-  z-index: 1;
-  top: 160px;
-  right: clamp(20px, 6vw, 90px);
-  font-size: clamp(30px, 4vw, 50px);
-  letter-spacing: .2em;
+  z-index: 2;
+  top: 40px;
+  right: 40px;
+  width: clamp(130px, 13.5vw, 200px);
+  aspect-ratio: 1;
+  background: var(--tema-sello, none) center / contain no-repeat;
+  content: '';
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, .3));
   pointer-events: none;
-  animation: tema-flotar 4s ease-in-out infinite;
+  animation: tema-sello .9s .3s cubic-bezier(.2, .8, .2, 1.2) both;
 }
 .contact-section { position: relative; overflow: hidden; }
 .contact-section::before {
-  content: var(--tema-decoracion-cta, none);
+  display: var(--tema-activo, none);
   position: absolute;
-  top: 40px;
-  right: max(24px, calc((100% - 1160px) / 2));
-  font-size: 30px;
-  letter-spacing: .2em;
+  top: 36px;
+  right: var(--gutter, 24px);
+  width: 64px;
+  height: 64px;
+  background: var(--color-acento);
+  content: '';
+  opacity: .9;
   pointer-events: none;
-  animation: tema-flotar 5s ease-in-out infinite;
+  -webkit-mask: var(--tema-icono) center / contain no-repeat;
+  mask: var(--tema-icono) center / contain no-repeat;
 }
-@keyframes tema-flotar {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+@keyframes tema-sello {
+  from { opacity: 0; transform: rotate(-40deg) scale(.6); }
+  to { opacity: 1; transform: rotate(-8deg) scale(1); }
+}
+@media (max-width: 860px) {
+  .hero::after { top: 28px; right: 16px; width: 116px; }
+  .contact-section::before { top: 20px; width: 52px; height: 52px; }
+  .hero-media .franjas-vertical { height: var(--tema-banda-alto, 12px); background: var(--tema-banda, repeating-linear-gradient(90deg, var(--color-acento) 0 14px, var(--color-detalle) 14px 28px)); }
 }
 @media (max-width: 620px) {
-  .hero::before { top: 78px; padding: 8px 14px; font-size: 12px; }
-  .hero-shade { background: var(--tema-fondo-hero, linear-gradient(0deg, rgba(24, 37, 29, .78), rgba(24, 37, 29, .13) 90%)); }
-  .hero::after { top: 140px; right: 18px; font-size: 26px; }
-  .contact-section::before { top: 28px; right: 20px; font-size: 24px; }
+  .tema-anuncio { padding: 10px 16px; font-size: 14px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero::after, .contact-section::before { animation: none; }
+  .hero::after { animation: none; transform: rotate(-8deg); }
 }
-
-
-
-
-
-
-
-

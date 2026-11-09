@@ -1,26 +1,31 @@
-/* Tema "dia-del-padre" (Día del Padre). Solo variables: no añadir selectores. */
+/* Tema "dia-del-padre". Solo variables: no añadir selectores.
+   Las ilustraciones (sello, icono y bandas) están en img/temas/dia-del-padre/. */
 :root {
-  --color-primario: #1f4e79;
-  --color-primario-oscuro: #13263a;
-  --color-acento: #a5581a;
-  --color-detalle: #f2b84b;
-  --color-fondo: #fafbfc;
+  --color-primario: #1e5aa8;
+  --color-primario-oscuro: #102540;
+  --color-acento: #1e5aa8;
+  --color-detalle: #9fc5e8;
+  --color-fondo: #f9f8f4;
   --color-fondo-alterno: #eaf0f6;
   --color-superficie: #ffffff;
   --color-fondo-icono: rgba(255, 255, 255, .6);
-  --color-borde: rgba(19, 38, 58, .22);
-  --color-boton: #1f4e79;
-  --color-boton-hover: #193f62;
-  --color-boton-activo: #13314b;
+  --color-borde: rgba(16, 37, 64, .18);
+  --color-boton: #1e5aa8;
+  --color-boton-hover: #184a8b;
+  --color-boton-activo: #123a6e;
   --color-boton-texto: #ffffff;
-  --color-boton-destacado-hover: #f2c46d;
-  --color-boton-destacado-activo: #f2b84b;
+  --color-boton-destacado-hover: #9fc5e8;
+  --color-boton-destacado-activo: #9fc5e8;
   --color-texto-invertido: #ffffff;
 
-  --tema-anuncio: "👔 ¡Feliz Día del Padre! Invítale a algo rico 💙";
-  --tema-anuncio-fondo: #1f4e79;
-  --tema-anuncio-texto: #ffffff;
-  --tema-fondo-hero: linear-gradient(20deg, rgba(19, 38, 58, .82), rgba(19, 38, 58, .45) 55%, rgba(19, 38, 58, .08));
-  --tema-decoracion: "👔 💙 🏆";
-  --tema-decoracion-cta: "💙 👔";
+  /* Decoración del tema (la pinta el bloque final de css/tema.css) */
+  --tema-activo: block;
+  --tema-anuncio: "Feliz Día del Padre · Encarga su comida venezolana favorita";
+  --tema-anuncio-fondo: #102540;
+  --tema-anuncio-texto: #9fc5e8;
+  --tema-sello: url("/img/temas/dia-del-padre/sello.svg");
+  --tema-icono: url("/img/temas/dia-del-padre/icono.svg");
+  --tema-banda: url("/img/temas/dia-del-padre/banda.svg") left center / auto 100% repeat-x;
+  --tema-banda-vertical: url("/img/temas/dia-del-padre/banda-v.svg") center top / 100% auto repeat-y;
+  --tema-banda-alto: 24px;
 }

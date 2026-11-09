@@ -1,26 +1,31 @@
-/* Tema "navidad" (Navidad). Solo variables: no añadir selectores. */
+/* Tema "navidad". Solo variables: no añadir selectores.
+   Las ilustraciones (sello, icono y bandas) están en img/temas/navidad/. */
 :root {
-  --color-primario: #1e6b3a;
-  --color-primario-oscuro: #0f3320;
-  --color-acento: #c0392b;
-  --color-detalle: #f2c94c;
-  --color-fondo: #fffaf2;
-  --color-fondo-alterno: #f3f0e4;
+  --color-primario: #1d5a36;
+  --color-primario-oscuro: #0f2e1c;
+  --color-acento: #b3122e;
+  --color-detalle: #e8c15a;
+  --color-fondo: #fbf7ee;
+  --color-fondo-alterno: #f2ece0;
   --color-superficie: #ffffff;
   --color-fondo-icono: rgba(255, 255, 255, .6);
-  --color-borde: rgba(15, 51, 32, .22);
-  --color-boton: #1e6b3a;
-  --color-boton-hover: #185a30;
-  --color-boton-activo: #124826;
+  --color-borde: rgba(15, 46, 28, .18);
+  --color-boton: #b3122e;
+  --color-boton-hover: #93101f;
+  --color-boton-activo: #780c19;
   --color-boton-texto: #ffffff;
-  --color-boton-destacado-hover: #f2c94c;
-  --color-boton-destacado-activo: #e8b923;
+  --color-boton-destacado-hover: #e8c15a;
+  --color-boton-destacado-activo: #e8c15a;
   --color-texto-invertido: #ffffff;
 
-  --tema-anuncio: "🎄 ¡Feliz Navidad! Celebra con Maracaná ✨";
-  --tema-anuncio-fondo: #0f3320;
-  --tema-anuncio-texto: #f2c94c;
-  --tema-fondo-hero: linear-gradient(20deg, rgba(15, 51, 32, .82), rgba(15, 51, 32, .45) 55%, rgba(15, 51, 32, .08));
-  --tema-decoracion: "🎄 ❄️ ⭐";
-  --tema-decoracion-cta: "🎁 🎄";
+  /* Decoración del tema (la pinta el bloque final de css/tema.css) */
+  --tema-activo: block;
+  --tema-anuncio: "Navidad en Maracaná · Encarga tus bandejas venezolanas para las fiestas";
+  --tema-anuncio-fondo: #0f2e1c;
+  --tema-anuncio-texto: #e8c15a;
+  --tema-sello: url("/img/temas/navidad/sello.svg");
+  --tema-icono: url("/img/temas/navidad/icono.svg");
+  --tema-banda: url("/img/temas/navidad/banda.svg") left center / auto 100% repeat-x;
+  --tema-banda-vertical: url("/img/temas/navidad/banda-v.svg") center top / 100% auto repeat-y;
+  --tema-banda-alto: 24px;
 }

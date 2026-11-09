@@ -1,26 +1,31 @@
-/* Tema "pascua" (Pascua). Solo variables: no añadir selectores. */
+/* Tema "pascua". Solo variables: no añadir selectores.
+   Las ilustraciones (sello, icono y bandas) están en img/temas/pascua/. */
 :root {
-  --color-primario: #4f6e31;
-  --color-primario-oscuro: #2d3d1d;
-  --color-acento: #a24f8f;
-  --color-detalle: #f7e07c;
-  --color-fondo: #fffcf3;
-  --color-fondo-alterno: #f1f6e8;
+  --color-primario: #2c7a5b;
+  --color-primario-oscuro: #173d30;
+  --color-acento: #2a7556;
+  --color-detalle: #f5d76e;
+  --color-fondo: #fbf9f1;
+  --color-fondo-alterno: #eef3ea;
   --color-superficie: #ffffff;
   --color-fondo-icono: rgba(255, 255, 255, .6);
-  --color-borde: rgba(45, 61, 29, .22);
-  --color-boton: #4f6e31;
-  --color-boton-hover: #425c29;
-  --color-boton-activo: #354a21;
+  --color-borde: rgba(23, 61, 48, .18);
+  --color-boton: #2a7556;
+  --color-boton-hover: #226147;
+  --color-boton-activo: #1a4d38;
   --color-boton-texto: #ffffff;
-  --color-boton-destacado-hover: #f7e07c;
-  --color-boton-destacado-activo: #f2d34f;
+  --color-boton-destacado-hover: #f5d76e;
+  --color-boton-destacado-activo: #f5d76e;
   --color-texto-invertido: #ffffff;
 
-  --tema-anuncio: "🐣 ¡Feliz Pascua! Disfruta de algo dulce 🌷";
-  --tema-anuncio-fondo: #2d3d1d;
-  --tema-anuncio-texto: #f7e07c;
-  --tema-fondo-hero: linear-gradient(20deg, rgba(45, 61, 29, .82), rgba(45, 61, 29, .45) 55%, rgba(45, 61, 29, .08));
-  --tema-decoracion: "🐣 🥚 🌷";
-  --tema-decoracion-cta: "🥚 🐰";
+  /* Decoración del tema (la pinta el bloque final de css/tema.css) */
+  --tema-activo: block;
+  --tema-anuncio: "Feliz Pascua · Encarga comida venezolana para estos días en familia";
+  --tema-anuncio-fondo: #173d30;
+  --tema-anuncio-texto: #f5d76e;
+  --tema-sello: url("/img/temas/pascua/sello.svg");
+  --tema-icono: url("/img/temas/pascua/icono.svg");
+  --tema-banda: url("/img/temas/pascua/banda.svg") left center / auto 100% repeat-x;
+  --tema-banda-vertical: url("/img/temas/pascua/banda-v.svg") center top / 100% auto repeat-y;
+  --tema-banda-alto: 24px;
 }

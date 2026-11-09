@@ -1,26 +1,31 @@
-/* Tema "dia-de-la-madre" (Día de la Madre). Solo variables: no añadir selectores. */
+/* Tema "dia-de-la-madre". Solo variables: no añadir selectores.
+   Las ilustraciones (sello, icono y bandas) están en img/temas/dia-de-la-madre/. */
 :root {
-  --color-primario: #a23b72;
-  --color-primario-oscuro: #45162f;
-  --color-acento: #b8466f;
-  --color-detalle: #f6c1d4;
-  --color-fondo: #fff8fa;
-  --color-fondo-alterno: #fbeaf1;
+  --color-primario: #a3174f;
+  --color-primario-oscuro: #3d1430;
+  --color-acento: #c2185b;
+  --color-detalle: #f4b6c2;
+  --color-fondo: #fdf7f6;
+  --color-fondo-alterno: #f7e8ec;
   --color-superficie: #ffffff;
   --color-fondo-icono: rgba(255, 255, 255, .6);
-  --color-borde: rgba(69, 22, 47, .22);
-  --color-boton: #a23b72;
-  --color-boton-hover: #88315f;
-  --color-boton-activo: #6e284d;
+  --color-borde: rgba(61, 20, 48, .18);
+  --color-boton: #c2185b;
+  --color-boton-hover: #a3144c;
+  --color-boton-activo: #86103e;
   --color-boton-texto: #ffffff;
-  --color-boton-destacado-hover: #f6c1d4;
-  --color-boton-destacado-activo: #f0a6c1;
+  --color-boton-destacado-hover: #f4b6c2;
+  --color-boton-destacado-activo: #f4b6c2;
   --color-texto-invertido: #ffffff;
 
-  --tema-anuncio: "💐 ¡Feliz Día de la Madre! Sorpréndela con algo rico 💖";
-  --tema-anuncio-fondo: #a23b72;
-  --tema-anuncio-texto: #ffffff;
-  --tema-fondo-hero: linear-gradient(20deg, rgba(69, 22, 47, .82), rgba(69, 22, 47, .45) 55%, rgba(69, 22, 47, .08));
-  --tema-decoracion: "💐 💖 🌸";
-  --tema-decoracion-cta: "💖 💐";
+  /* Decoración del tema (la pinta el bloque final de css/tema.css) */
+  --tema-activo: block;
+  --tema-anuncio: "Feliz Día de la Madre · Encarga su comida venezolana favorita";
+  --tema-anuncio-fondo: #3d1430;
+  --tema-anuncio-texto: #f4b6c2;
+  --tema-sello: url("/img/temas/dia-de-la-madre/sello.svg");
+  --tema-icono: url("/img/temas/dia-de-la-madre/icono.svg");
+  --tema-banda: url("/img/temas/dia-de-la-madre/banda.svg") left center / auto 100% repeat-x;
+  --tema-banda-vertical: url("/img/temas/dia-de-la-madre/banda-v.svg") center top / 100% auto repeat-y;
+  --tema-banda-alto: 24px;
 }
