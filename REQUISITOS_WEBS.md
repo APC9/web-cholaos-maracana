@@ -6,11 +6,11 @@
 2. **Cliente activo en `clients`** (`active = true`, con su `whatsapp_e164`) y **fila completa en `client_websites`**: `github_owner`, `github_repository`, `default_branch`, `netlify_site_id`, `website_url` y `active = true`.
 3. **El token de GitHub de n8n tiene acceso al repositorio**: token *fine-grained* con *Contents: Read and write* en ese repo.
 4. **El código fuente es texto editable** en el repositorio: `.html`, `.css`, `.scss`, `.js`, `.ts`, `.jsx`, `.tsx`, `.astro`, `.vue`, `.svelte`, `.md`, `.mdx`, `.json`, `.yml`, `.txt` o `.svg`. Si en el repo solo hay archivos compilados o minificados (`dist/`, `*.min.css`), la IA no puede editar con seguridad.
-5. **Archivos de tamaño razonable**: la IA lee como máximo unos 60.000 caracteres por archivo. Un `index.html` más grande que eso, con todo el CSS y JS dentro, se lee cortado y el cambio se rechaza.
+5. **Archivos de tamaño razonable**: la IA lee como máximo unos 60.000 caracteres por archivo. Un `index.html` más grande que eso, con todo el CSS y JS dentro, se lee cortado y el cambio se rechaza.  
 6. **El contenido no está en archivos protegidos.** La automatización nunca toca `package.json`, `netlify.toml`, `_redirects`, `_headers`, `CNAME`, `*.config.js`, `tsconfig.json`, `.env*`, `.github/` ni `netlify/functions/`.
 7. **Sin secretos en el repositorio**: el validador bloquea cualquier cambio que introduzca algo con aspecto de clave.
 
-## Recomendados (marcan la diferencia en lo que se puede automatizar)
+## Recomendados para (marcan la diferencia en lo que se puede automatizar)
 
 - **CSS en un archivo aparte** (`css/styles.css`) en lugar de `<style>` dentro de cada HTML.
 - **Colores y tipografías como variables CSS** en un único sitio:
