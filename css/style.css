@@ -272,6 +272,8 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 700; font-stre
 .footer .footer-brand { display: block; width: 62px; height: 62px; flex: 0 0 auto; overflow: hidden; border-radius: 50%; background: #fff; }
 .footer-brand img { width: 100%; height: 100%; object-fit: contain; }
 .footer-inner > p { margin: 0 auto 0 0; font-family: var(--display); font-size: clamp(20px, 2.2vw, 28px); font-weight: 600; font-stretch: 85%; line-height: 1.2; }
+.footer-social .social-link { width: 42px; height: 42px; border-color: rgba(255, 255, 255, .3); background: transparent; color: var(--color-texto-invertido); font-size: 17px; }
+.footer-social .social-link:hover { border-color: var(--color-detalle); background: var(--color-detalle); color: var(--ink); }
 .footer-top { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; }
 .footer-top:hover, .footer-legal a:hover { color: var(--color-detalle); }
 .footer-bottom { display: grid; gap: 18px; padding: 20px 0 24px; border-top: 1px solid rgba(255, 255, 255, .2); color: rgba(255, 255, 255, .72); font-size: 13px; }
